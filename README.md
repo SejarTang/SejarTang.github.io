@@ -1,1 +1,1 @@
-# SejarTang.github.io
+# https://algosophy.com
