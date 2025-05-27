@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/blog/2025/05/13/Computational-Geometry/Computational-Geometry/"/>
+      <url>/blog/2025/05/13/Computational-Geometry/Computational-Geometry/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong><em>Computational Geometry</em></strong></p></blockquote><p>[toc]</p><h2><span id="1-convex-hull">1 Convex Hull</span></h2><div style="display: flex; justify-content: center; gap: 20px;">  <figure style="text-align: center;">    <img src="../images/ConvexHull.png" width="250px">    <figcaption>The rubber band shrinks to get the convex hull</figcaption>  </figure>  <figure style="text-align: center;">    <img src="../images/OloidStructure.png" width="250px">    <figcaption>Oloid structure, showing the two 240-degree circular sectors and the convex hull</figcaption>  </figure></div><h3><span id="1-1-introduction">1.1 Introduction</span></h3><p>Given a number of paints, how to mix them into a desired color? For simplicity, consider just Red(R) and Green(G). Each paint is then defined as $C = (R, G)$ If two paints are available, $X = (10%,35%),Y = (16%, 20%)$. Can we get by mixing them a paint $U = (12%, 30%)$ ? How about another mixed paint $V = (13%, 22%)$ ? Will a third paint $Z = (7%, 15%)$ help?  </p><p>Represent paints by planer points:<br>$X = (10, 35), Y = (16, 20), Z = (7, 15)$</p><ul><li>U can be produced from X and Y iff it lies on the segment XY</li><li>V can be produced from X, Y and Z iff it lies in the triangle XYZ</li></ul><p>Mixing ratio for</p><p>$$<br>V(12, 22)=X : Y : Z = \frac{1}{|VX|} : \frac{1}{|VY|} : \frac{1}{|VZ|}<br>=1 : 3 : 1<br>$$</p><h3><span id="1-2-extremity">1.2 Extremity</span></h3><p>Let S be a set of n points in the plane. A point P of S is called an extreme point</p><ul><li>if there exists a line L through P<ul><li>such that all points of S lie on the same side of L</li><li>otherwise P is called non-extreme</li></ul></li></ul><p><strong>Convex Combination</strong><br>Given a point set</p><p>$$<br>Let \space \vec\lambda =\left \langle \lambda_1, \ldots ,\lambda_n \right \rangle^T\in \mathbb{R}^n,  \lambda_1+ \cdots +\lambda_n=1 \space and \space \lambda_i&gt;0<br>$$</p><p>The point</p><p>$$<br>P=\left \langle P_1,\ldots,P_n \right \rangle \vec\lambda =\lambda_1P_1+ \cdots + \lambda_nP_n<br>$$</p><p>is called a convex combination of S.</p><h3><span id="1-3-strategy">1.3 Strategy</span></h3><p>A polygon is convex iff every vertex is extreme. It suffices to construct CH(P) from all extreme points of S. A point A is not an EP of S iff there exists</p><p>$$<br>\lbrace P,Q,R \rbrace \subseteq S\backslash \lbrace A \rbrace \space s.t. \space A\in \Delta PQR<br>$$</p><h3><span id="1-4-itt-amp-tlt">1.4 ITT &amp; TLT</span></h3><p>All EPs will be identified if we test each point against every potential triangle:<br>Using In-Triangle Test<br>Note that A lies inside the triangle iff all the 3 To-Left Test return TRUE/FALSE when the triangle is given in CCW/CW order</p><h2><span id="2">2</span></h2><h3><span id="2-1">2.1</span></h3>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
